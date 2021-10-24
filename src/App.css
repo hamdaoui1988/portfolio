@@ -1,38 +1,536 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto Condesed", sans-serif;
+}
+
+/************NAVBAR ********/
+.navbar {
+ 
+  padding-left: 50px;
+  margin:0 auto;
+  z-index: 2;
+  width:100%;
+}
+
+
+.logo {
+width: 13rem;
+}
+
+.right-navbar {
+  display: flex;
+  align-items: center;
+  padding-right:100px;
+}
+
+.right-navbar a{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  text-decoration: none;
+  color:black;
+  font-weight: 500;
+  letter-spacing: 0.03rem;
+  cursor:pointer;
+  text-transform: uppercase;
+}
+
+.right-navbar a:focus{
+border-top:0.18rem solid #0d3601;
+}
+
+
+/*        header            */
+
+.header-wrapper {
+  position: relative;
+  background: url(bani.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  font-family: "Roboto Condesed", sans-serif;
+  padding-top: 200px;
+  align-content: flex-start;
+  align-items: flex-start;
+  padding: 200px 80px;
+  margin-left: 70px;
+  z-index: 1;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-info h1 {
+  color:#fff;
+  text-transform: uppercase;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.typed-text {
+  font-size: 2rem;
+  color: #546350;
+}
+
+
+.text-1{
+  font-size:27px;
+  color:white;
+  }
+  
+.text-2{
+      font-size:55px;
+      font-weight: 600;
+      margin-left: -3px;
+      color:white;
+  }
+  
+.text-3{
+      font-size:40px;
+      margin:5px 0;
+      color:white;
+  }
+
+
+.hire-me{
+    display: inline-block;
+    background: #0d3601;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #0d3601;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    text-decoration: none;
+    z-index: 2;
+}
+
+.hire-me:hover{
+  color: #fff;
+    background: none;
+}
+  
+
+.tsparticles-canvas-el{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+@media(max-width:1018px) {
+
+.logo{
+  display: none;
+}
+
+
+
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 80px;
+
+}
+}
+
+
+@media(max-width:768px) {
+
+
+  .particles-canvas {
+    display: none;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.aboutme-right{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Roboto Condesed", sans-serif;
+  background: lightgray;
+  padding: 100px;
+}
+
+.aboutme-right h1{
+  text-transform: uppercase;
+  color:#0d3601
+}
+
+.aboutme {
+  display: flex;
+  max-height: 500px;
+  margin-top: 30px;
+}
+
+.aboutme-left{
+  width:50%;
+ 
+}
+
+.aboutme-right{
+  width:50%;
+ 
+}
+.aboutme-right h1{
+  padding-bottom: 25px;
+ 
+}
+
+.aboutme-left img{
+  width:748px;
+  height:500px;
+  width: 100%;
+}
+
+.services {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left: 70px;
+  padding-right: 70px;
+  background: rgb(221, 221, 221);
+  padding-bottom: 50px;
+}
+
+.services h3{
+  padding-top: 50px;
+}
+
+.services-wrapper {
+  display: flex;
+}
+
+.services-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 300px;
+  border:0.2px solid gray;
+  cursor: pointer;
+  background: white;
+  border-bottom: 5px solid #0d3601;
+  border-radius: 7px;
+  box-shadow: 10px 10px 10px rgb(0, 0, 0,0.2);
+  transition: transform .2s; /* Animation */
+  
+}
+
+.services-details span{
+  padding-bottom: 20px;
+  font-family: "Roboto Condesed", sans-serif;
+  padding-right: 10px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.services-details h5{
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-size: 15px;
+  font-family: "Roboto Condesed", sans-serif;
+  font-weight: 500;
+}
+
+.services-details svg{
+  width:20px;
+  height:20px;
+}
+
+.services-details-icon {
+  margin-top: 20px;
+  border:1px solid gray;
+  vertical-align: middle;
+  border-radius: 50%;
+  color:white;
+  padding: 10px;
+  background: #0d3601;
+}
+
+.services-details:hover{
+  background: #0d3601;
+  border-bottom: 5px solid black;
+  color:white;
+  transition: all 0.2s ease;
+  transform: scale(1.05); /* (105% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.services-details-icon:hover{
+  background:white;
+  color:black;
+}
+
+
+.experience {
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: white;
+
+}
+
+
+
+.experience h1{
+  display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.experience-container-left {
+  width:50%;
+  margin-right: 20px;
+  border-right: 1px solid lightgray;
+}
+
+.experience-container-left h2{
+color:#0d3601;
+
+}
+
+.experience-container-right h2{
+  color:#0d3601;
+  
+}
+  .experience-container-left p{
+    font-size: 15px;
+    font-family: "Roboto Condesed", sans-serif;
+    font-weight: 500;
+    
+    }
+
+    .experience-container-right p{
+      font-size: 15px;
+      font-family: "Roboto Condesed", sans-serif;
+      font-weight: 500;
+      
+      }
+ 
+
+.experience-container-right {
+  width:50%;
+  margin-left: 20px;
+}
+
+.experience-container{
+  display: flex;
+}
+
+
+.experience-title{
+  margin: 0 auto;
+}
+
+.experience-container{
+padding:20px;
+
+}
+
+.portfolio-image img{
+  width:634px;
+  height:297px;
+}
+
+.portfolio-image {
+  width:50%;
+}
+
+.portfolio-details {
+  width:50%;
+  padding-left: 150px;
+}
+
+.portfolio-details h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+    line-height: 1.6;
+    font-family: open sans,sans-serif;
+}
+
+.portfolio-details span {
+  color:#0d3601;
+}
+.portfolio-details p{
+  color: black;
+  font-size: 15px;
+  font-family: open sans,sans-serif;
+  font-weight: 300;
+  padding-bottom: 16px;
+}
+
+
+.myproject{
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: lightgray;
+}
+
+.portfolio-container {
+  display: flex;
+}
+
+.preview-button {
+
+    color: #fff;
+    background-color: #0d3601;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    font-family: open sans,sans-serif;
+    margin-right: 16px;
+    text-decoration: none;
+  
+}
+
+.visitsite-button {
+  color: #0d3601;
+    background-color: #fff;
+    border:1px solid #1b6b03;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    font-family: open sans,sans-serif;
+    margin-right: 16px;
+    text-decoration: none;
+    
+}
+
+.visitsite-button:hover {
+  color: #fff;
+    background-color: #0d3601;
+}
+
+.preview-button:hover {
+  color: #fff;
+    background-color: #1b6b03;
+}
+
+
+
+.myproject h1{
+  display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+
+.portfolio-container {
+  padding-bottom: 80px;
+  padding-top: 80px;
+  border-bottom: 1px solid #1b6b03;
+
+
+}
+
+.portfolio-container-last {
+  padding-bottom: 80px;
+  padding-top: 80px;
+  display: flex;
+}
+
+
+.mailer {
+  font-size: 14px;
+  font-family: open sans,sans-serif;
+  font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    max-width: 1140px;
+    margin:0 auto;
+    padding-bottom: 48px;
+    padding-top: 80px;
+}
+.mailer_first {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.mailer_first input {
+  background: #fff;
+    border: 1px solid #dadada;
+    margin-right:25px;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    padding: .375rem .75rem;
+}
+
+.mailer_first label {
+ padding-right:15px;
+}
+
+
+.mailer-details textarea {
+  background: #fff;
+  border: 1px solid #dadada;
+      width: 49%;
+  border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding: .375rem .75rem;
+}
+
+.mailer-details {
+  color: #9c9c9c;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.mailer-details button {
+  cursor: pointer;
+  color: #fff;
+  padding: 12px 30px;
+    border-radius: 30px;
+    background-color:#1b6b03;
+    border-color: #0d3601;
+    margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mailer-details button:hover {
+  background-color:#208003;
+}
+
+.mailer-details p{
+  padding-top: 20px;
+  Color: #4BB543;
+}
+
+.mailer h2{
+  margin-bottom: 20px;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.6;
+  font-family: open sans,sans-serif;
+  color: #212529;
 }

@@ -2,11 +2,11 @@ import React from "react"
 import whatup from '../whatup.PNG'
 import youtube from '../youtube.PNG'
 import lucking from '../lucking.PNG'
-
+import ega from '../ega.PNG'
 function Myprojects() {
     return (
         <div id="projects" className="myproject">
-            <h1>PORTFOLIO</h1>
+            <h1>MY WEB PROJECTS</h1>
 
 
 
@@ -42,6 +42,21 @@ function Myprojects() {
 
             
 
+            <div className="portfolio-container">
+                <div className="portfolio-image">
+                <img src={ega} />
+                </div>
+                <div className="portfolio-details">
+                <h3>EGA LEATHERCRAFT</h3>
+                <p>inspired By STARBUCKS , Lucking Coffee is a well-known handcraft e-commerce shop . this website was build for AZZEDIN EL GMAIRI . check it out for pure leather goods </p>
+                <p>Design by <span>HAMDAOUI NOUR EDDINE</span> .</p>
+                <div className="portfolio-buttons">
+                    <a href="#" className="preview-button">Preview</a>
+                    <a href="https://hamdaoui1988.github.io/ega_leathercraft/" target="_blank" className="visitsite-button">Visit Site</a>
+                </div>
+                </div>
+            </div>
+
             <div className="portfolio-container-last">
                 <div className="portfolio-image">
                 <img src={lucking} />
@@ -56,7 +71,6 @@ function Myprojects() {
                 </div>
                 </div>
             </div>
-
 
 
 
